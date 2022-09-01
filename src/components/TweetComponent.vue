@@ -10,13 +10,7 @@
 
       <Message :message="message" />
 
-      <div className="actions">
-        <!-- Font Awesome icons -->
-        <i class="far fa-comment" />
-        <i class="fas fa-retweet" />
-        <i class="far fa-heart" />
-        <i class="fas fa-share" />
-      </div>
+      <Actions />
     </div>
 
     <i class="fas fa-ellipsis-h" />
@@ -28,6 +22,7 @@ import ProfileImage from './tweet/ProfileImageComponent.vue';
 import User from './tweet/UserComponent.vue';
 import Timestamp from './tweet/TimestampComponent.vue';
 import Message from './tweet/MessageComponent.vue';
+import Actions from './tweet/ActionsComponent.vue';
 
 export default {
   name: 'TweetComponent',
@@ -36,6 +31,7 @@ export default {
     User,
     Timestamp,
     Message,
+    Actions,
   },
   props: {
     user: {
