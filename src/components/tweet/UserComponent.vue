@@ -1,19 +1,23 @@
 <template>
-  <img
-    src="https://i.imgur.com/b-1EdHVV.jpg"
-    className="profile"
-    alt="profile"
-  >
+  <span className="user">
+    <span className="name">{{ name }}</span>
+    <span className="handle">@{{ handle }}</span>
+  </span>
 </template>
 
 <script>
 export default {
-  name: 'ProfileImageComponent',
+  name: 'UserComponent',
   props: {
-    image: {
+    name: {
       type: String,
       required: true,
     },
+    handle: {
+      type: String,
+      required: true,
+    },
+
   },
 };
 </script>

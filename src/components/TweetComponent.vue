@@ -4,12 +4,8 @@
 
     <div className="body">
       <div className="top">
-        <span className="user">
-          <span className="name">{{ user.name }}</span>
-          <span className="handle">@{{ user.handle }}</span>
-        </span>
-
-        <span className="timestamp">{{ timestamp }}</span>
+        <User :name="user.name" :handle="user.handle" />
+        <Timestamp :time="timestamp" />
       </div>
 
       <p className="message">
@@ -31,11 +27,15 @@
 
 <script>
 import ProfileImage from './tweet/ProfileImageComponent.vue';
+import User from './tweet/UserComponent.vue';
+import Timestamp from './tweet/TimestampComponent.vue';
 
 export default {
   name: 'TweetComponent',
   components: {
     ProfileImage,
+    User,
+    Timestamp,
   },
   props: {
     user: {
